@@ -1,0 +1,15 @@
+/Users/connorpepin/Desktop/VSCode Projects/Refreshers/C#/Hangman/obj/Debug/net6.0/Hangman.csproj.AssemblyReference.cache
+/Users/connorpepin/Desktop/VSCode Projects/Refreshers/C#/Hangman/obj/Debug/net6.0/Hangman.GeneratedMSBuildEditorConfig.editorconfig
+/Users/connorpepin/Desktop/VSCode Projects/Refreshers/C#/Hangman/obj/Debug/net6.0/Hangman.AssemblyInfoInputs.cache
+/Users/connorpepin/Desktop/VSCode Projects/Refreshers/C#/Hangman/obj/Debug/net6.0/Hangman.AssemblyInfo.cs
+/Users/connorpepin/Desktop/VSCode Projects/Refreshers/C#/Hangman/obj/Debug/net6.0/Hangman.csproj.CoreCompileInputs.cache
+/Users/connorpepin/Desktop/VSCode Projects/Refreshers/C#/Hangman/bin/Debug/net6.0/Hangman
+/Users/connorpepin/Desktop/VSCode Projects/Refreshers/C#/Hangman/bin/Debug/net6.0/Hangman.deps.json
+/Users/connorpepin/Desktop/VSCode Projects/Refreshers/C#/Hangman/bin/Debug/net6.0/Hangman.runtimeconfig.json
+/Users/connorpepin/Desktop/VSCode Projects/Refreshers/C#/Hangman/bin/Debug/net6.0/Hangman.dll
+/Users/connorpepin/Desktop/VSCode Projects/Refreshers/C#/Hangman/bin/Debug/net6.0/ref/Hangman.dll
+/Users/connorpepin/Desktop/VSCode Projects/Refreshers/C#/Hangman/bin/Debug/net6.0/Hangman.pdb
+/Users/connorpepin/Desktop/VSCode Projects/Refreshers/C#/Hangman/obj/Debug/net6.0/Hangman.dll
+/Users/connorpepin/Desktop/VSCode Projects/Refreshers/C#/Hangman/obj/Debug/net6.0/ref/Hangman.dll
+/Users/connorpepin/Desktop/VSCode Projects/Refreshers/C#/Hangman/obj/Debug/net6.0/Hangman.pdb
+/Users/connorpepin/Desktop/VSCode Projects/Refreshers/C#/Hangman/obj/Debug/net6.0/Hangman.genruntimeconfig.cache
