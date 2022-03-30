@@ -13,7 +13,9 @@ namespace Hangman
             PlayGame(word);
         }
         /// <summary>
-        /// Asks the user for guesses to a 
+        /// Asks the user for guesses to a word and displays a stick figure hangman board to represent wrong guesses
+        /// Correct guesses are shown in the list of underscores/letters
+        /// The goal is to guess the missing word
         /// </summary>
         /// <param name="word">The word the player is trying to guess</param>
         public static void PlayGame(string word)
