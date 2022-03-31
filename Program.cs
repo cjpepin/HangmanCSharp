@@ -26,6 +26,8 @@ namespace Hangman
             //Create a list to keep track of the player's guesses
             List<string> guesses = new List<string>();
 
+            //Keep track of and show the wrong guesses a player makes
+            List<string> wrongGuesses = new List<string>();
             //Indexing the amount of turns that have been taken
             var i = 0;
 
@@ -36,12 +38,24 @@ namespace Hangman
                 DrawHangman(i);
                 //Spacer
                 Console.WriteLine();
+
+                //Show the user the wrong guesses they have made
+                Console.WriteLine("Wrong guesses: " + string.Join("  ", wrongGuesses));
+
                 //Write the letters/underscores based on how much the player has guessed correctly
                 Console.WriteLine(wordUnderscores);
-
+                
+                //If the player has guessed all the correct letters
+                if(checkWin(wordUnderscores))
+                {
+                    //If the player guessed the correct word, they win!
+                    Console.WriteLine($"You win!! The word was {word}");
+                    break;
+                }
                 //Ask the player for input
                 Console.WriteLine("What is your guess? (If you guess a word with a number" +
-                                     " in it or a number, that will count)");
+                                     " in it or a number, that will count)" + 
+                                     " (Also in order to win you have to guess the entire word)");
                 //Read the user input
                 var userInput = Console.ReadLine();
 
@@ -70,6 +84,11 @@ namespace Hangman
                     {
                         //If the word doesn't contain the letter, let the user know and iterate the board by 1 appendage
                         Console.WriteLine($"The word does not contain any {userInput}s");
+
+                        //Add the wrong guess to the wrong guesses list
+                        wrongGuesses.Add(userInput);
+
+                        //Increase the board forward by one appendage
                         i+=1;
                     }
                 }
@@ -78,6 +97,10 @@ namespace Hangman
                 {
                     //Let the player know that they guessed the word incorrectly
                     Console.WriteLine($"{userInput} was not the word.");
+
+                    //Add the wrong guess to the wrong guesses list
+                    wrongGuesses.Add(userInput);
+
                     //Increase the board forward by one appendage
                     i+=1;
 
@@ -87,6 +110,7 @@ namespace Hangman
                     Console.WriteLine($"You win!! The word was {word}");
                     break;
                 }
+                
                 //The end of the game
                 if(i == 9)
                 {
@@ -112,25 +136,29 @@ namespace Hangman
             List<string> wordList = new List<string>();
 
             //Add words to the list
-            wordList.Add("crank");
-            wordList.Add("break");
-            wordList.Add("play");
-            wordList.Add("treat");
-            wordList.Add("pants");
             wordList.Add("harder");
-            wordList.Add("lights");
             wordList.Add("streaks");
-            wordList.Add("jam");
             wordList.Add("hippocampus");
-            wordList.Add("common");
             wordList.Add("rocks");
             wordList.Add("chair");
             wordList.Add("allowed");
             wordList.Add("dreaded");
-            wordList.Add("supply");
-            wordList.Add("tried");
-            wordList.Add("tread");
-            wordList.Add("upwards");
+            wordList.Add("abruptly");
+            wordList.Add("abyss");
+            wordList.Add("matrix");
+            wordList.Add("syndrome");
+            wordList.Add("nowadays");
+            wordList.Add("glyph");
+            wordList.Add("oxygen");
+            wordList.Add("whiskey");
+            wordList.Add("strength");
+            wordList.Add("flapjack");
+            wordList.Add("fluffiness");
+            wordList.Add("stronghold");
+            wordList.Add("witchcraft");
+            wordList.Add("whomever");
+            wordList.Add("peekaboo");
+
 
             //Create a new random object from System.Random;
             Random rand = new Random();
@@ -182,6 +210,19 @@ namespace Hangman
             }
             //Return the list converted to a string seperated by spaces
             return string.Join(" ", underscoresList);
+        }
+
+        public static bool checkWin(string guesses)
+        {
+            var list = guesses.Split(" ");
+            for(int i = 0; i < list.Length; i++)
+            {
+                if(list[i] == "_")
+                {
+                    return false;
+                }
+            }
+            return true;
         }
 
         /// <summary>
